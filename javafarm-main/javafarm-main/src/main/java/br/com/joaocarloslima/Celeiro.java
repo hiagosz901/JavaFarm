@@ -3,8 +3,8 @@ package br.com.joaocarloslima;
 public class Celeiro {
     private int capacidade = 50;
     private int qtdeBatatas = 10;
-    private int qtdeCenouras = 5;
-    private int qtdeMorangos = 5;
+    private int qtdeCenouras = 10;
+    private int qtdeMorangos = 10;
 
     public void armazenarBatata() {
         if (getEspacoDisponivel() < 2) throw new RuntimeException("Celeiro cheio");
