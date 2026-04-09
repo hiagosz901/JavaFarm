@@ -18,24 +18,24 @@ public class Fazenda {
 
     public void plantarBatata(int x, int y) {
         Terreno t = terrenos.get(x * 13 + y);
-        if (t.estaOcupado()) throw new RuntimeException("Já tem coisa aqui mn");
-        if (celeiro.getQtdeBatatas() < 1) throw new RuntimeException("tu não tem batata no celeiro");
+        if (t.estaOcupado()) throw new RuntimeException("Está ocupado!");
+        if (celeiro.getQtdeBatatas() < 1) throw new RuntimeException("Sem batata no celeiro");
         t.plantar(new Batata());
         celeiro.consumirBatata();
     }
 
     public void plantarCenoura(int x, int y) {
         Terreno t = terrenos.get(x * 13 + y);
-        if (t.estaOcupado()) throw new RuntimeException("Já tem coisa aqui mn");
-        if (celeiro.getQtdeCenouras() < 1) throw new RuntimeException("tu não tem cenoura no celeiro");
+        if (t.estaOcupado()) throw new RuntimeException("Está ocupado!");
+        if (celeiro.getQtdeCenouras() < 1) throw new RuntimeException("Sem cenoura no celeiro");
         t.plantar(new Cenoura());
         celeiro.consumirCenoura();
     }
 
     public void plantarMorango(int x, int y) {
         Terreno t = terrenos.get(x * 13 + y);
-        if (t.estaOcupado()) throw new RuntimeException("Já tem coisa aqui mn");
-        if (celeiro.getQtdeMorangos() < 1) throw new RuntimeException("tu não tem morango no celeiro");
+        if (t.estaOcupado()) throw new RuntimeException("Está ocupado!");
+        if (celeiro.getQtdeMorangos() < 1) throw new RuntimeException("Sem morango no celeiro");
         t.plantar(new Morango());
         celeiro.consumirMorango();
     }
